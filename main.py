@@ -3,8 +3,10 @@ from schemas import TacheCreation
 from fastapi import HTTPException
 from fastapi import Depends
 from sqlalchemy.orm import Session
-from database import get_db
+from database import Base, engine, get_db
 from models import TacheModel
+
+Base.metadata.create_all(bind=engine)   # crée la table "taches" si elle n'existe pas encore
 
 app = FastAPI()
 
