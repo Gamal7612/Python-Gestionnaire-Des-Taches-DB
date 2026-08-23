@@ -1,0 +1,12 @@
+# Environnement virtuel
+venv/
+
+# Fichiers Python compilés
+__pycache__/
+*.pyc
+
+# Configuration éditeur
+.vscode/
+
+# Base de données locale (générée par l'app, ne pas versionner)
+*.db
