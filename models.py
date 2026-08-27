@@ -11,4 +11,11 @@ class TacheModel(Base):
     description = Column(String, index=True)
     date_echeance = Column(String, index=True)
     terminee = Column(Boolean, default=False)
-    
+  
+
+class UtilisateurModel(Base):
+    __tablename__ = "utilisateurs"
+
+    id = Column(Integer, primary_key=True, index=True)
+    email = Column(String, unique=True, index=True, nullable=False)
+    mot_de_passe_hash = Column(String, nullable=False)
